@@ -1,0 +1,38 @@
+/* data */
+.details-dokumen{
+    position: relative;
+    left: 20px;
+    width: 100%; 
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px; 
+    margin-top: 10px;
+}
+
+form.dokumen{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0rem 1rem;
+    transition: all 0.2s 0.7s;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.input-dokumen{
+    max-width: 500px;
+    width: 300%;
+}
+
+.input-field .icon {
+    margin-top: 25%;
+}
+
+
+
+.btn.klausul{
+    margin-left: 100%;
+}

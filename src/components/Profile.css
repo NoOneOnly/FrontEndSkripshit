@@ -1,0 +1,13 @@
+
+.cardBox#profile{
+    
+    grid-template-columns: repeat(2, 1fr);
+}
+.card {
+    align-items: center;
+}
+
+.details .recentOrders table tr td:last-child {
+    text-align: center;
+}
+
