@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "../api/axios";
+import Swal from 'sweetalert2';
 // import { Link } from "react-router-dom";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
@@ -77,13 +78,33 @@ const Register = () => {
       setUser("");
       setPwd("");
       setMatchPwd("");
+      Swal.fire({
+        icon: 'success',
+        title: 'Great!',
+        text: 'Register berhasil!'
+      })
     } catch (err) {
       if (!err?.response) {
         setErrMsg("No Server Response");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'No Server Response!'
+        })
       } else if (err.response?.status === 409) {
         setErrMsg("Username Taken");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Username Taken!'
+        })
       } else {
         setErrMsg("Registration Failed");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Registration Failed!'
+        })
       }
       errRef.current.focus();
     }

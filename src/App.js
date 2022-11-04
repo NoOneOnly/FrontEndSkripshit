@@ -19,6 +19,13 @@ import Users from './components/Users';
 import Home2 from './components/Home2';
 import UserList from './features/users/UserList';
 import Document9 from './components/Document9';
+import Document1 from './components/Document1';
+import Document2 from './components/Document2';
+import Document3 from './components/Document3';
+import Document4 from './components/Document4';
+import Document5 from './components/Document5';
+import Document6 from './components/Document6';
+import Document7 from './components/Document7';
 
 
 const ROLES = {
@@ -64,6 +71,27 @@ function App() {
             <Route path="email" element={<Email />} />
           </Route>
 
+          <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
+            <Route path="document1" element={<Document1 />} />
+          </Route>
+          <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
+            <Route path="document2" element={<Document1 />} />
+          </Route>
+          <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
+            <Route path="document3" element={<Document1 />} />
+          </Route>
+          <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
+            <Route path="document4" element={<Document1 />} />
+          </Route>
+          <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
+            <Route path="document5" element={<Document1 />} />
+          </Route>
+          <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
+            <Route path="document6" element={<Document1 />} />
+          </Route>
+          <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
+            <Route path="document7" element={<Document1 />} />
+          </Route>
           <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
             <Route path="document8" element={<Document8 />} />
           </Route>

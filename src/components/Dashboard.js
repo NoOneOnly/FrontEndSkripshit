@@ -10,7 +10,7 @@ import { faEye } from '@fortawesome/free-regular-svg-icons';
 import VerticalChart from './VerticalChart';
 import PolarAreaChart from './PolarAreaChart';
 import { NavLink } from 'react-router-dom';
-import { faBook, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faUser, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
 const Dashboard = () => {
 
@@ -34,17 +34,7 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </NavLink>
-                    <NavLink exact to='/email'>
-                        <div className="card">
-                            <div>
-                                <div className="numbers">Upload File</div>
-                                <div className="cardName">Dokumen</div>
-                            </div>
-                            <div className="iconBx">
-                                <FontAwesomeIcon icon={faBook} />
-                            </div>
-                        </div>
-                    </NavLink>
+
 
                     <NavLink exact to='/document8'>
                         <div className="card">
@@ -68,6 +58,17 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </NavLink>
+                    <NavLink exact to='/email'>
+                        <div className="card">
+                            <div>
+                                <div className="numbers">Logout</div>
+                                <div className="cardName"></div>
+                            </div>
+                            <div className="iconBx">
+                                <FontAwesomeIcon icon={faRightFromBracket} />
+                            </div>
+                        </div>
+                    </NavLink>
                 </div>
 
                 {/* Charts */}
@@ -83,6 +84,8 @@ const Dashboard = () => {
             </div>
 
             <Sidebar />
+            <div className="footer">Copyright &copy; 2022 Tim UG. All rights reserved.</div>
+
 
         </>
     )

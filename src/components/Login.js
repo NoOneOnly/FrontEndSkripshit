@@ -5,12 +5,13 @@ import axios from "../api/axios";
 import LeftPanel from "./LeftPanel";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faLock, faQuestion } from "@fortawesome/free-solid-svg-icons";
 
 import useInput from "../hooks/useInput";
 import useToggle from "../hooks/useToggle";
 import Register from "./Register2";
-
+import './Login.css'
+import Swal from 'sweetalert2';
 const LOGIN_URL = "/auth";
 
 // js cookie
@@ -61,15 +62,51 @@ const Login = () => {
       resetUser();
       setPwd("");
       navigate(from, { replace: true });
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+
+      Toast.fire({
+        icon: 'success',
+        title: 'Signed in successfully'
+      })
     } catch (err) {
       if (!err?.response) {
         setErrMsg("No Server Response");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!'
+        })
       } else if (err.response?.status === 400) {
         setErrMsg("Missing Username or Password");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Missing Username or Password!'
+        })
       } else if (err.response?.status === 401) {
         setErrMsg("Unauthorized");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Unauthorized!'
+        })
       } else {
         setErrMsg("Login Failed");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Login Failed!'
+        })
       }
       errRef.current.focus();
     }
@@ -84,6 +121,9 @@ const Login = () => {
 
   return (
     <section className="container">
+      <div className="helpBox">
+        <button className="info"><FontAwesomeIcon icon={faQuestion} className="icon" /></button>
+      </div>
       <div className="forms-container">
         <div className="signin-signup">
           <p
@@ -92,10 +132,14 @@ const Login = () => {
             aria-live="assertive"
           >
             {errMsg}
+
+
           </p>
           <form onSubmit={handleSubmit} className="sign-in-form">
-            <img src="img/logo_ug.png" className="imagelogo" alt="" />
-            <h2 className="title">Selamat Datang!</h2>
+            {/* <img src="img/logo_ug.png" className="imagelogo" alt="" /> */}
+            <h2 className="title" id="judul">Aplikasi Penyusunan Dokumen <br /> Sistem Manajemen Energi</h2>
+
+            <h2 className="title" id="welcome">Selamat Datang!</h2>
 
             <div className="input-field">
               <FontAwesomeIcon icon={faUser} className="icon" />
@@ -145,6 +189,7 @@ const Login = () => {
                         </span>
                     </p> */}
         </div>
+        <div className="footer">Copyright &copy; 2022 Tim UG. All rights reserved.</div>
       </div>
 
       <LeftPanel />

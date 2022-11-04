@@ -332,6 +332,7 @@ const Document = () => {
 
             </div>
             <Sidebar />
+            <div className="footer">Copyright &copy; 2022 Tim UG. All rights reserved.</div>
         </>
     )
 }

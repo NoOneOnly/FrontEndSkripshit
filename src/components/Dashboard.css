@@ -22,6 +22,10 @@ body {
     overflow-x: hidden;
 }
 
+.navigation::-webkit-scrollbar {
+    display: none;
+  }
+
 a {
     text-decoration: none;
 }
@@ -165,7 +169,7 @@ a {
     height: 60px;
     line-height: 28px;
     white-space: normal;
-    text-align: right;
+    text-align: center;
 }
 
 .navigation.active ul li a .titlesLogo{

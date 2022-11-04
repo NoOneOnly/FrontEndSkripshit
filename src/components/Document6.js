@@ -226,7 +226,7 @@ const Document = () => {
                     {/* detail list */}
                     <div className="recentOrders">
                         <div className="cardHeader">
-                            <h2>Halaman Klausul 8</h2>
+                            <h2>Halaman Klausul 6</h2>
                         </div>
                         <div className="form-container">
                             <div className="form-input">

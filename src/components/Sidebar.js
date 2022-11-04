@@ -54,9 +54,9 @@ const Sidebar = () => {
               <span className="titlesLogo">
                 Penyusunan Dokumen Sistem Manajemen Energi
               </span>
-              <div className="imgBx">
+              {/* <div className="imgBx">
                 <img src="img/LOGO_GUNDAR.png" alt="" />
-              </div>
+              </div> */}
             </NavLink>
           </li>
           <li className="list">
@@ -89,6 +89,76 @@ const Sidebar = () => {
               <span className="titles">Data</span>
             </NavLink>
           </li> */}
+          <li className="list">
+            <NavLink exact to="/document1" activeClassName="active">
+              <b></b>
+              <b></b>
+              <span className="icon">
+                <FontAwesomeIcon icon={faBook} className="icd" />
+              </span>
+              <span className="titles">Klausul 1</span>
+            </NavLink>
+          </li>
+          <li className="list">
+            <NavLink exact to="/document2" activeClassName="active">
+              <b></b>
+              <b></b>
+              <span className="icon">
+                <FontAwesomeIcon icon={faBook} className="icd" />
+              </span>
+              <span className="titles">Klausul 2</span>
+            </NavLink>
+          </li>
+          <li className="list">
+            <NavLink exact to="/document3" activeClassName="active">
+              <b></b>
+              <b></b>
+              <span className="icon">
+                <FontAwesomeIcon icon={faBook} className="icd" />
+              </span>
+              <span className="titles">Klausul 3</span>
+            </NavLink>
+          </li>
+          <li className="list">
+            <NavLink exact to="/document4" activeClassName="active">
+              <b></b>
+              <b></b>
+              <span className="icon">
+                <FontAwesomeIcon icon={faBook} className="icd" />
+              </span>
+              <span className="titles">Klausul 4</span>
+            </NavLink>
+          </li>
+          <li className="list">
+            <NavLink exact to="/document5" activeClassName="active">
+              <b></b>
+              <b></b>
+              <span className="icon">
+                <FontAwesomeIcon icon={faBook} className="icd" />
+              </span>
+              <span className="titles">Klausul 5</span>
+            </NavLink>
+          </li>
+          <li className="list">
+            <NavLink exact to="/document6" activeClassName="active">
+              <b></b>
+              <b></b>
+              <span className="icon">
+                <FontAwesomeIcon icon={faBook} className="icd" />
+              </span>
+              <span className="titles">Klausul 6</span>
+            </NavLink>
+          </li>
+          <li className="list">
+            <NavLink exact to="/document7" activeClassName="active">
+              <b></b>
+              <b></b>
+              <span className="icon">
+                <FontAwesomeIcon icon={faBook} className="icd" />
+              </span>
+              <span className="titles">Klausul 7</span>
+            </NavLink>
+          </li>
           <li className="list">
             <NavLink exact to="/document8" activeClassName="active">
               <b></b>

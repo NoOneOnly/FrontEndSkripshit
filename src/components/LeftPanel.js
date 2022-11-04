@@ -39,8 +39,8 @@ const LeftPanel = () => {
             <div className="panel left-panel">
 
                 <div className="content">
-                    <h3>Aplikasi Penyusunan Dokumen </h3>
-                    <h3>Sistem Manajemen Energi</h3>
+                    <h3>Belum punya akun? </h3>
+                    <h3>Daftar Sekarang!</h3>
                     <p>
 
                     </p>

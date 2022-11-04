@@ -157,6 +157,7 @@ li {
 
 body,
 input {
+  
   font-family: "Poppins", sans-serif;
 }
 
@@ -605,5 +606,11 @@ form.sign-in-form {
   .container.sign-up-mode:before {
     bottom: 28%;
     left: 50%;
+  }
+
+ 
+
+  .footer {
+    display: none;
   }
 }
